@@ -1,0 +1,42 @@
+Assignment-2
+
+Que:1 What is Git ?
+Ans:1 Git is a popular version control system(VCS), It was created by LiIus Torvalds in 2005 and has been maintained by Junio Hamano.
+
+Que:2 What do you understand by the term ‘Version Control System ?
+Ans:2 It is a system that records changes to a file or set of files overtime,so that we can recall specific versions later ,i.e., for every source code changes in a file a new version will be created.
+There are 3 types of VCS:
+
+(i) Local Version Control System.
+(ii)Centralised Control System.
+(iii)Distributed Version Control System.
+
+Que:3 What is Github ?
+Ans:3 Github is a Git server tool.It is used to store or maintain the source code of project.
+
+Que:4 Mention some popular git hosting services ?
+Ans:4 Bitbucket.
+      GitLab.
+      Perforce.
+      Beanstalk.
+      Amazon AWS CodeCommit.
+      Codebase.
+      Microsoft Azure DevOps.
+      SourceForge.
+
+Que:5 Different types of version control system ?
+Ans:5 There are two types of version control: centralized and distributed.
+
+Que:6 What benefits come with using git ?
+Ans:6 One of the biggest advantages of Git is its branching capabilities. Unlike centralized version control systems, Git branches are cheap and easy to merge. This facilitates the feature branch workflow popular with many Git users. Feature branches provide an isolated environment for every change to your codebase.
+
+Que:7 What is a GIT Repository ?
+Ans:7 Repositories in GIT contain a collection of files of various different versions of a Project. These files are imported from the repository into the local server of the user for further updations and modifications in the content of the file. 
+
+Que:8 How can you initialize a repository in git ?
+Ans:8 (i) Create a new repository on GitHub.com. ...
+      (ii)Open TerminalTerminalGit Bash.
+      (iii)Change the current working directory to your local project.
+      (iv)Use the init command to initialize the local directory as a Git repository. ...
+      (v) Add the files in your new local repository. ...
+      (vi)Commit the files that you've staged in your local repository.
