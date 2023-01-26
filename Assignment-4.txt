@@ -1,0 +1,26 @@
+Assignment-4
+
+Que-1 What is Programming language?
+Ans-1 A programming language is a vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks. • The term programming language usually refers to high-level languages, such as BASIC, C, C++, COBOL, Java, FORTRAN, Ada, and Pascal.
+
+Que-2 Why do we need a programming language?
+Ans-2 Programming languages use classes and functions that control commands. The reason that programming is so important is that it directs a computer to complete these commands over and over again, so people do not have to do the task repeatedly. Instead, the software can do it automatically and accurately.
+
+Que-3 What are the features of Java?
+Ans-3 Simple.
+Object-Oriented.
+Platform Independent.
+Portable.
+Robust.
+Secure.
+Interpreted.
+Multi-Threaded.
+
+Que-4 What is an Object?
+Ans-4 Objects are key to understanding object-oriented technology. Look around right now and you'll find many examples of real-world objects: your dog, your desk, your television set, your bicycle.
+
+Que-5 What is a class?
+Ans-5 A class — in the context of Java — is a template used to create objects and to define object data types and methods.
+
+Que-6 Explain about the main() method in Java?
+Ans-6 The Java main method is usually the first method you learn about when you start programming in Java because its the entry point for executing a Java program. The main method can contain code to execute or call other methods, and it can be placed in any class that's part of a program.
