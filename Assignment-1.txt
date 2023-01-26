@@ -1,0 +1,26 @@
+                                                          Assignment-1
+
+
+Que-1 What is a Computer ?
+Ans-1  A computer is a machine or device that performs processes, calculations and operations based on instructions provided by a software or hardware program. It has the ability to accept data (input), process it, and then produce outputs.
+
+Que-2 What is RAM ?
+Ans-2 RAM (random access memory) is a computer's short-term memory, where the data that the processor is currently using is stored. Your computer can access RAM memory much faster than data on a hard disk, SSD, or other long-term storage device, which is why RAM capacity is critical for system performance.
+
+Que-3 Where is data stored in a computer ?
+Ans-3 Data is copied from the computer's main memory (random-access memory or RAM), and then written to the hard disk. The drive is the mechanical device that writes the data to the disk.
+
+Que-4 What is the input device used to type text and numbers on a document in the computer system ?
+Ans-4 The keyboard is an input device that allows you to enter letters, numbers and symbols into your computer. The keyboard keys include the alphanumeric keys (letters and numbers), numeric keypad (may not be available on netbooks/laptops), special function keys, mouse cursor moving keys, and status lights.
+
+Que-5 What are the output devices ?
+Ans-5 Output devices are monitors and projectors (video), headphones and speakers (audio), or printers and plotters (physical reproduction in the form of text or graphics).
+
+Que-6 Which is the input device that allows a user to move the cursor or pointer on the screen ?
+Ans-6  A mouse is a small handheld device pushed over a horizontal surface. A mouse moves the graphical pointer by being slid across a smooth surface.
+
+Que-7 Which language is directly understood by the computer without a translation program ?
+Ans-7 Machine language gives instructions as 0's and 1's and is the only language that the computer understands.
+
+Que-8 What are input devices ?
+Ans-8 Input devices are Keyboard , Mouse , Joystick , Light Pen , Scanner etc.
