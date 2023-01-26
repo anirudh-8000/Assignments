@@ -1,0 +1,32 @@
+Assignment-3
+
+Que-1 How to check if git is available on your system?
+Ans-1 Check If Git is Installed
+You can check whether Git is installed and what version you are using by opening up a terminal window in Linux or Mac, or a command prompt window in Windows, and typing the following command: git --version.
+
+Que-2 How to initialize a new Git repository?
+Ans-2 Create a new repository on GitHub.com. ...
+Open Terminal .
+Change the current working directory to your local project.
+Use the init command to initialize the local directory as a Git repository. ...
+Add the files in your new local repository. ...
+Commit the files that you've staged in your local repository.
+
+Que-3 How to tell git about your name and email? 
+Ans-3 The Username :- git config --global user.name "<your_username>"
+The Email :- git config --global user.email "<your_email>"
+
+Que-4 How to add a file to the staging area?
+Ans-4 Add files to the staging area by using the "git add" command and passing necessary options. 
+
+Que-5 How to remove a file from the staging area?
+Ans-5 "git rm --cached fileName" command.
+
+Que-6 How to make a commit?
+Ans-6 Commit files to the local repository using the "git commit -m <message>" command.
+
+Que-7 How to send your changes to a remote repository?
+Ans-7 To push the commit from the local repo to your remote repositories, run git push -u remote-name branch-name .
+
+Que-8 What is the difference between clone and pull?
+Ans-8 git clone is how you get a local copy of an existing repository to work on. git pull (or git fetch + git merge ) is how you update that local copy with new commits from the remote repository.
