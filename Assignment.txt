@@ -1,0 +1,39 @@
+Assignment-5
+
+Que-1 What is statically typed and Dynamically typed Programming Language?
+Ans-1 Dynamically-typed languages perform type checking at runtime, while statically typed languages perform type checking at compile time.
+
+Que-2 What is the variable in Java?
+Ans-2 Variables are containers for storing data values. In Java, there are different types of variables, for example: String - stores text, such as "Hello". String values are surrounded by double quotes. int - stores integers (whole numbers), without decimals, such as 123 or -123.
+
+Que-3 How To Assign a Value To Variable?
+Ans-3 type variableName = value; Where type is one of Java's types (such as int or String ), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
+
+Que-4 What are Primitive Data types in Java?
+Ans-4 Primitive types are predefined (already defined) in Java.
+Primitive data types - includes byte , short , int , long , float , double , boolean and char. 
+
+Que-5 What are the identifiers in Java?
+Ans-5 Identifiers in Java are names that distinguish between different Java entities, such as classes, methods, variables, and packages. Identifiers include the names of classes, methods, variables, packages, constants, etc.
+
+Que-6 List the Operators in Java?
+Ans-6 Arithmetic Operators.
+Assignment Operators.
+Logical Operators.
+Relational Operators.
+Unary Operators.
+Bitwise Operators.
+Ternary Operators.
+Shift Operators.
+
+Que-7 Explain about Increment and Decrement operators and give an examples ?
+Ans-7 The increment (++) operator (also known as increment unary operator) in Java is used to increase the value of a variable by 1. 
+It is two types:
+Pre Increment - ++identifier
+Post Increment - identifier++
+
+The decrement (--) operator (also known as decrement unary operator) in Java is used to decrease the value of a variable by 1. 
+It is two types:
+Pre Decrement - --identifier
+Post Decrement - identifier--
+
