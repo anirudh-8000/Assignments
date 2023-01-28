@@ -1,0 +1,71 @@
+Assignment-6
+
+Que-1 What are the Conditional Operators in Java?
+Ans-1 n Java, conditional operators check the condition and decides the desired result on the basis of both conditions.
+There are three types of the conditional operator in Java:
+
+Conditional AND(&&)
+Conditional OR(||)
+Ternary Operator(?:)
+
+Que-2 What are the types of operators based on the number of operands?
+Ans-2 There are two types of mathematical operators: unary and binary. Unary operators perform an action with a single operand. Binary operators perform actions with two operands.
+
+Que-3 What is the use of Switch case in Java programming?
+Ans-3 The switch case in java is used to select one of many code blocks for execution. Break keyword: As java reaches a break keyword, the control breaks out of the switch block. The execution of code stops on encountering this keyword, and the case testing inside the block ends as the match is found.
+
+Que-4 What are the priority levels of arithmetic operation in Java?
+Ans-4 *,/,% have same priority but associativity is left to right and +,- have same priority but associativity is left to right.
+(*,/,%) has high priority than (+,-) .
+
+Que-5 What are the conditional Statements and use of conditional statements in Java?
+Ans-5 Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed.
+
+Que-6 What is the syntax of if else statement?
+Ans-6 if(condition1){  
+//code to be executed if condition1 is true  
+}else if(condition2){  
+//code to be executed if condition2 is true  
+}  
+else if(condition3){  
+//code to be executed if condition3 is true  
+}  
+...  
+else{  
+//code to be executed if all the conditions are false  
+}  
+
+
+Que-7 What are the 3 types of iterative statements in java? 
+Ans-7 Java programming language provides following types of loop to handle looping  requirements. Repeats a statement or group of statements until a given condition is true.
+
+Iteration Statements
+' while' loop.
+' do while' loop.
+' for' loop
+
+Que-8 Write the difference between for loop and do-while loop?
+Ans-8 For loop	                                                Do-While loop
+      Statement(s) is executed once the condition is checked.	Condition is checked after the statement(s) is executed.
+      It might be that statement(s) gets executed zero times.	Statement(s) is executed at least once.
+      For the single statement, bracket is not compulsory.	      Brackets are always compulsory.
+      Initialization may be outside or in condition box.	      Initialization may be outside or within the loop.
+      for loop is entry controlled loop.	                        do-while is exit controlled loop.
+      for ( init ; condition ; iteration )                        do { statement(s); }
+      { statement (s); }	                                    while (condition); 
+                                                                 
+
+Que-9 Write a program to print numbers from 1 to 10.
+Ans-9  class Use_For_Loop
+       {
+          public static void main(String[] args)
+          {
+               for(int i = 1; i <= 10; i++)
+               {
+                   System.out.println(i);
+               }
+           }
+       }
