@@ -1,0 +1,57 @@
+Assignment-8
+
+Que-1 How to Create an Object in Java?
+Ans-1 Using the new keyword is the most popular way to create an object or instance of the class. When we create an instance of the class by using the new keyword, it allocates memory (heap) for the newly created object and also returns the reference of that object to that memory. The new keyword is also used to create an array. The syntax for creating an object is:
+
+ClassName object = new ClassName();  
+
+Que-2 What is the use of a new keyword in Java?
+Ans-2 The new keyword in Java instantiates a class by allocating desired memory for an associated new object. 
+It then returns a reference to that memory. Many times, the new keyword in Java is also used to create the array object. 
+The new keyword is followed by a call to a constructor, which instantiates the new object.
+
+Que-3 What are the different types of variables in Java?
+Ans-3 There are three types of variables in Java: Local, Instance, and Static.
+
+Que-4 What is the difference between Instance variable and Local variables?
+Ans-4 Instance Variable: These variables are declared within a class but outside a method, constructor, or block and always get a default value.
+
+These variables are usually created when we create an object and are destroyed when the object is destroyed.
+We may use an access specifier, for instance, variable, and if no access specifier is specified, then the default access specifier is used.
+Each and every object will have its own copy of instance variables.
+Example:
+
+class Taxes  
+{  
+   int count; // Count is an Instance variable  
+   /*...*/  
+}  
+Local Variable: These variables are declared within a method but do not get any default value.
+
+They are usually created when we enter a method or constructor and are destroyed after exiting the block or when the call returns from the method.
+Its scope is generally limited to a method and its scope starts from the line they are declared. Their scope usually remains there until the closing curly brace of the method comes.
+The initialization of the local variable is mandatory.
+Example:
+
+int area()      
+{    
+        int length = 10; // Local variable          
+        int breadth = 5; // Local variable          
+        int rectarea = length*breadth; // Local variable          
+        return rectarea;          
+}  
+
+Que-5 In which area memory is allocated for instance variable and local variable?
+Ans-5 Stack is a memory place where the methods and the local variables are stored. (variable references either primitive or object references are also stored in the stack). 
+Heap is a memory place where the objects and its instance variable are stored.
+
+Que-6 What is method overloading?
+Ans-6 If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+
+If we have to perform only one operation, having same name of the methods increases the readability of the program.
+
+Different ways to overload the method
+There are two ways to overload the method in java
+
+By changing number of arguments
+By changing the data type
