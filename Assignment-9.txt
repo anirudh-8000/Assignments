@@ -1,0 +1,40 @@
+Assignment-9
+
+Que-1 What do you mean by an Array?
+Ans-1 An array is a collection of elements of the same type placed in contiguous memory locations that can be individually referenced by using an index to a unique identifier. 
+Five values of type int can be declared as an array without having to declare five different variables (each with its own identifier).
+
+Que-2 How to create an Array?
+Ans-2 To create an array, define the data type (like int ) and specify the name of the array followed by square brackets []. 
+To insert values to it, use a comma-separated list, inside curly braces: int myNumbers[] = {25, 50, 75, 100}; 
+We have now created a variable that holds an array of four integers.
+
+Que-3 Can we change the size of an array at run time?
+Ans-3 You can't change the size of the array after it's constructed. However, you can change the number of elements in an ArrayList whenever you want.
+
+Que-4 Can you declare an array without assigning the size of an array?
+Ans-4 Yes. We can declare an array without size but before using it needs to be initialized
+
+Que-5 What is the default value of Array?
+Ans-5 Initializing an Array Without Assigning Values
+Similarly, in the case of a boolean array, it will be false, in the case of a String array the default value is null in java, and in the case of a char array, the default value is Unicode (\u0000).
+
+Que-6 What is a ID array with an example?
+Ans-6 It is clear from the name that a one-dimensional array in java must deal with only one parameter. Entities of similar types can be stored together using one-dimensional arrays. 
+      It can store primitive data types (int, float, char, etc.) or objects.
+      Example: int marks[ ] = { 90, 97, 95, 99, 100 };
+
+Que-7 Write a program on a 2D array?
+Ans-7 Program:
+class TwodimensionalStandard
+{
+	public static void main(String args[])
+	{    
+	int[][] a={{10,20},{30,40}};//declaration and initialization   
+	System.out.println("Two dimensional array elements are");    
+	System.out.println(a[0][0]);    
+	System.out.println(a[0][1]);    
+	System.out.println(a[1][0]);    
+	System.out.println(a[1][1]);    	
+	}
+}
