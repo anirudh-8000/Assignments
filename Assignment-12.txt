@@ -1,0 +1,99 @@
+Assignment-12
+
+Que-1 Write a simple String program to take input from user
+Ans-1 Program:
+mport java.util.Scanner;
+public class practice1 {
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        String name;
+        name=sc.next();
+        System.out.println(name);
+    }
+}
+
+Que-2 How do you concatenate two strings in Java? Give an example?
+Ans-2 program:
+public class practice2 {
+    public static void main(String [] args){
+        String firstName="Anirudh ";
+        String lastName="Garg";
+        String name=firstName.concat(lastName);
+        System.out.println(name);
+    }
+}
+
+Que-3 How do you find the length of a string in Java Explain with an example?
+Ans-3 Program:
+public class practice3 {
+    public static void main(String [] args){
+        String name="Anirudh";
+        System.out.println(name.length());
+    }
+}
+
+Que-4 How do you compare two strings in Java? Give an Example
+Ans-4 Program:
+public class practice4 {
+    public static void main(String [] args){
+        String name1="Anirudh";
+        String name2="Anirudh";
+        System.out.println(name1.equals(name2));
+    }
+}
+
+Que-5 Write a program to find the length of the string "refrigerator".
+Ans-5 program:
+public class practice5 {
+    public static void main(String [] args){
+        String name="refrigerator";
+        System.out.println(name.length());
+    }
+}
+
+Que-6 Write a program to check if the letter 'e' is present in the word 'Umbrella'.
+Ans-6 Program:
+public class practice6 {
+    public static void main(String [] args){
+        boolean flag=false;
+        String name="Umbrella";
+        for(int i=0;i<name.length();i++){
+            if(name.charAt(i)=='e'){
+                flag=true;
+                break;
+            }
+        }
+        if(flag)
+            System.out.println("True");
+        else
+            System.out.println("False");
+    }
+}
+
+
+Que-7 Write a program to delete all consonants from the string "Hello, have a good day".
+Ans-7 Program:
+public class practice7 {
+    public static void main(String[] args){
+        int j=0;
+        String str = "Hello, have a good day";
+        char ch[]=new char[20];
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u'
+               ||str.charAt(i)=='A'||str.charAt(i)=='E'||str.charAt(i)=='I'||str.charAt(i)=='O'||str.charAt(i)=='U'){
+                ch[j++]=str.charAt(i);
+            }
+            else{
+                continue;
+            }
+        }
+        for(int i=0;i<j;i++)
+        {
+            System.out.print(ch[i]);
+        }
+        System.out.println();
+    }
+}
+
+output:- eoaeaooa
+
