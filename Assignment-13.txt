@@ -1,0 +1,257 @@
+Assignment-13
+
+Que-1 WAP(Write a Program) to remove Duplicates from a String.(Take any String example with duplicates character)
+Ans-1 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="Java is a Simple Programming Language";
+		String str2="";
+		char[]arr= new char[26];
+		for(int i=0;i<str.length();i++) {
+			int num=str.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				str2=str2+str.charAt(i);
+				continue;
+			}
+			if(arr[num]==0) {
+				str2=str2+str.charAt(i);
+				arr[num]++;
+			}
+		}
+	 	System.out.print(str2);
+	}
+}
+Output: Jav is  mple rogn u
+
+
+Que-2 WAP to print Duplicates characters from the String
+Ans-2 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="PWSKILLS JAVA";
+		char []arr=new char[26];
+		for(int i=0;i<str.length();i++) {
+			int num=str.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				continue;
+			}
+			arr[num]++;
+		}
+		System.out.print("Duplicate Characters:");
+		for(int i=0;i<26;i++) {
+			if(arr[i]>1){
+				char maxChar=(char)(i+65);
+				System.out.print(maxChar+" ");
+			}
+		}
+	}
+}	
+Output: Duplicate Characters:A L S 
+
+Que-3 WAP to check if "2552" is palindrome or not.
+Ans-3 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str1="2552";
+		String str2="";
+		for(int i=str1.length()-1;i>=0;i--) {
+			str2=str2+str1.charAt(i);
+		}
+		if(str1.equals(str2)) {
+			System.out.println("Given String is Palindrome String.");
+		}
+		else {
+			System.out.println("Given String is not Palindrome String.");
+		}
+	}
+}
+
+Que-4 WAP to count the number of consonants, vowels, special characters in a String.
+Ans-4 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="@#coder asdf @jkl";
+		int symbols=0,vowels=0,consonants=0;
+		for(int i=0;i<str.length();i++) {
+			if(str.charAt(i)>=32&&str.charAt(i)<-47 || str.charAt(i)>=58&&str.charAt(i)<=64
+			   || str.charAt(i)>=91&&str.charAt(i)<=96 || str.charAt(i)>=123&&str.charAt(i)<=126) {
+				symbols++;
+			}
+			else if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||
+					str.charAt(i)=='u'||str.charAt(i)=='A'||str.charAt(i)=='E'||str.charAt(i)=='I'||
+					str.charAt(i)=='O'||str.charAt(i)=='U') {
+				vowels++;
+			}
+			else if(str.charAt(i)>=65&&str.charAt(i)<=90 || str.charAt(i)>=97 && str.charAt(i)<=122) {
+				consonants++;
+			}
+		}
+		System.out.println("Special Symbols:"+symbols);
+		System.out.println("Vowels:"+vowels);
+		System.out.println("Consonants:"+consonants);
+	}
+}
+Output:
+Special Symbols:2
+Vowels:3
+Consonants:9
+
+Que-5 WAP to implement Anagram Checking least inbuilt methods being used.
+Ans-5 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="School Master";
+		String str2="The Classroom";
+		char []arr=new char[26];
+		char []arr2=new char[26];
+		boolean flag=false;
+		for(int i=0;i<str.length();i++) {
+			int num=str.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				continue;
+			}
+			arr[num]++;
+		}
+		for(int i=0;i<str2.length();i++) {
+			int num=str2.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				continue;
+			}
+			arr2[num]++;
+		}
+		for(int i=0;i<26;i++) {
+			if(arr[i]!=arr2[i]){
+				flag=true;
+				break;
+			}
+		}
+		if(!flag) {
+			System.out.println("It is an Anagram");
+		}
+		else {
+			System.out.println("It is not an Anagram");
+		}
+	}
+}
+Output:It is an Anagram
+
+Que-6 WAP to implement Pangram Checking with least inbuilt methods being used.
+Ans-6 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="abcdefghijklmnopqrstuvwxyz";
+		char []arr=new char[26];
+		boolean flag=false;
+		for(int i=0;i<str.length();i++) {
+			int num=str.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				continue;
+			}
+			arr[num]++;
+		}
+		for(int i=0;i<26;i++) {
+			if(arr[i]!=1){
+				flag=true;
+				break;
+			}
+		}
+		if(!flag) {
+			System.out.println("It is an Panagram.");
+		}
+		else {
+			System.out.println("It is not an Panagram");
+		}
+	}
+}	
+Output:It is an Panagram.
+
+Que-7 WAP to find if String contains all unique characters.
+Ans-7 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="AnirudhAni";
+		char []arr=new char[26];
+		for(int i=0;i<str.length();i++) {
+			int num=str.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				continue;
+			}
+			arr[num]++;
+		}
+		boolean flag=false;
+		for(int i=0;i<26;i++) {
+			if(arr[i]>1) {
+				flag =true;
+				break;
+			}
+		}
+		if(flag) {
+			System.out.println("All Character is not unique");
+		}
+		else {
+			System.out.println("All Character is unique");
+		}
+	}
+}	
+Output:All Character is not unique
+
+Que-8 WAP to find the maximum occurring character in a String
+Ans-8 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="AnirudhAniii";
+		char []arr=new char[26];
+		for(int i=0;i<str.length();i++) {
+			int num=str.charAt(i);
+			if(num>64&&num<91)
+				num=num-65;
+			else if(num>96&&num<123) {
+				num=num-97;
+			}
+			else {
+				continue;
+			}
+			arr[num]++;
+		}
+		int max=0,index=0;
+		for(int i=0;i<26;i++) {
+			if(arr[i]>max) {
+				max=arr[i];
+				index=i;
+			}
+		}
+		char maxChar=(char)(index+65); 
+		System.out.println("Maximum Character is "+maxChar);
+	}
+}	
+Output:Maximum Character is I
