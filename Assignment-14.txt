@@ -1,0 +1,55 @@
+Assignment-14
+
+Que-1 What is Mutable String in Java Explain with an example
+Ans-1 A mutable string can be changed, and an immutable string cannot be changed. Here I want to change the value of String like this, String str="Good"; str=str+" Morning"; and other way is, StringBuffer str= new StringBuffer("Good"); 
+
+Que-2 WAP to reverse a String Input: "PWSKILLS" Output: "SLLIKSPW"
+Ans-2 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		StringBuffer name=new StringBuffer("PWSKILLS");
+		name.reverse();
+		System.out.println(name);
+	}
+}	
+Output:
+SLLIKSWP
+
+Que-3 WAP to reverse a sentence while preserving the position Input: Think Twice Output: "kniht eciwt"
+Ans-3 Program:
+public class stringProgram {
+	public static void main(String[] args) {
+		String str="Think Twice";
+		String revStr="";
+		String[] arr=str.split(" ");
+		for(String elem:arr) {
+			for(int i=elem.length()-1;i>=0;i--) {
+				revStr=revStr+elem.charAt(i);
+			}
+			revStr=revStr+" ";
+		}
+		System.out.println(revStr);
+	}
+}	
+Output:kniht eciwt 
+
+Que-4 WAP to sort a String Alphabetically
+Ans-4 Program:
+import java.util.Arrays;
+
+public class stringProgram {
+	public static void main(String[] args) {
+		String name=new String("PWSKILLS");
+		String sortName=new String("");
+		char[] arr=new char[name.length()];
+		for(int i=0;i<name.length();i++) {
+			arr[i]=name.charAt(i);
+		}
+		Arrays.sort(arr);
+		for(int i=0;i<arr.length;i++) {
+			sortName+=arr[i];
+		}
+		System.out.println(sortName);
+	}
+}	
+Output:IKLLPSSW
