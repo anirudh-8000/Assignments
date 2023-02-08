@@ -1,0 +1,47 @@
+Assignment-15
+
+Que-1 Why do we need static keyword in Java Explain with an example?
+Ans-1 The most important reason why static keywords are heavily used in Java is to efficiently manage memory. Generally, if you want to access variables or methods inside a class, you first need to create an instance or object of that class.
+Example: Suppose there are 500 students in my college, now all instance data members will get memory each time when the object is created. All students have its unique rollno and name, so instance data member is good in such case. Here, "college" refers to the common property of all objects. If we make it static, this field will get the memory only once.
+class Student{  
+     int rollno;  
+     String name;  
+     static String college="ITS";  // common for all object
+}  
+
+Que-2 What is class loading and how does the Java program actually executes?
+Ans-2 Class loading is the process in Java where the Java Virtual Machine (JVM) loads class files into memory and converts them into objects that can be executed by the program.
+The JVM first checks if the class has already been loaded, if not, it searches for the class file on the classpath. The classpath is a list of directories and JAR files where the JVM looks for class files.
+Once the class file is located, it is loaded into memory, verified for its bytecode structure, and transformed into a Java class object. The JVM then executes the bytecode instructions in the class object by translating them into machine code that can be executed by the underlying operating system.
+
+In summary, Java program execution involves the following steps:
+Loading the class file into memory
+Verifying the bytecode structure
+Transforming the bytecode into a Java class object
+Executing the bytecode instructions by translating them into machine code.
+
+Que-3 Can we mark a local variable as static
+Ans-3 You can use Static only on local variables. This means the declaration context for a Static variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module. You cannot use Static inside a structure procedure.
+
+Que-4 Why is the static block executed before the main method in java?
+Ans-4 The static blocks always execute first before the main() method in Java because the compiler stores them in memory at the time of class loading and before the object creation. Here, the compiler executes all the static blocks first, and after finishing the static block execution, it invokes the main() method.
+
+Que-5 Why is a static method also called a class method?
+Ans-5 A static method is a method that belongs to a class rather than an instance of a class. This means you can call a static method without creating an object of the class. Static methods are sometimes called class methods.
+
+Que-6 What is the use of static blocks in java?
+Ans-6 Static block in java is used for changing the default value of static variables, initializing static variables of the class, write a set of codes that you want to execute during the class loading in memory.
+
+Que-7 Difference between Static and Instance variables 
+Ans-7 Static and instance variables are two types of variables in object-oriented programming.
+
+Static variables (also called class variables) are variables that belong to a class rather than to an instance of the class. They are shared by all instances of a class and can be accessed directly from the class, without the need to create an instance of the class. There is only one copy of a static variable, regardless of how many instances of the class exist.
+
+Instance variables (also called non-static variables) are variables that belong to an instance of a class and are unique to each instance. They are created every time a new instance of a class is created. Instance variables can be accessed only through an instance of the class.
+
+In summary, static variables are class-level variables, while instance variables are object-level variables.
+
+Que-8 Difference between static and non static members
+Ans-8 Static members belong to the class itself rather than to an instance of the class, and can be accessed using the class name without creating an instance of the class. Non-static members belong to an instance of the class and can be accessed only through an instance of the class.
+
+In other words, static members have only one instance shared among all instances of the class, while non-static members have a separate instance
