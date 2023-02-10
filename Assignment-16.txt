@@ -1,0 +1,94 @@
+Assignment-16
+
+Que-1 What is Encapsulation in Java? Why is it called Data hiding?
+Ans-1 Encapsulation in Java refers to integrating data (variables) and code (methods) into a single unit. In encapsulation, a class's variables are hidden from other classes and can only be accessed by the methods of the class in which they are found.
+
+Que-2 What are the important features of Encapsulation?
+Ans-2 The following are the significant benefits of encapsulation. A class can have complete control over its data members and data methods. The class will maintain its data members and methods as read-only. Data hiding prevents the user from the complex implementations in the code.
+
+Que-3 What are getter and setter methods in Java Explain with an example
+Ans-3 class GetSet {
+ 
+    // Member variable of this class
+    private String name;
+ 
+    // Method 1 - Getter
+    public String getName() { return name; }
+    // Getter is used to get the value.
+    // Method 2 - Setter
+    public void setName(String N)
+    {
+ 
+        // This keyword refers to current instance itself
+        this.name = N;
+    }
+    //Setter is used to set the values.
+}
+ 
+// Class 2
+// Main class
+class GFG {
+ 
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Creating an object of class 1 in main() method
+        GetSet obj = new GetSet();
+ 
+        // Setting the name by calling setter method
+        obj.setName("Anirudh");
+        // Getting the name by calling getter method
+        System.out.println(obj.getName());
+    }
+}
+
+Que-4 What is the use of this keyword explain with an example
+Ans-4 class student{
+	private int age;
+	private int thisAge;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		age = age;
+	}
+	public int getThisAge() {
+		return thisAge;
+	}
+	public void setThisAge(int thisAge) {
+		this.thisAge = thisAge;
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		student obj=new student();
+		obj.setAge(5);
+		System.out.println(obj.getAge());
+		obj.setThisAge(18);
+		System.out.println(obj.getThisAge());
+	}
+}	
+output:0
+       18
+
+Que-5 What is the advantage of Encapsulation?
+Ans-5 Encapsulation is a way to restrict the direct access to some components of an object, so users cannot access state values for all of the variables of a particular object. Encapsulation can be used to hide both data members and data functions or methods associated with an instantiated class or object.
+
+Que-6 How to achieve encapsulation in Java? Give an example.
+Ans-6 class student{
+	private int age;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		student obj=new student();
+		obj.setAge(5);
+		System.out.println(obj.getAge());
+	}
+}	
+output: 5
