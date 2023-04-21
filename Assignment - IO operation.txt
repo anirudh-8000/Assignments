@@ -1,0 +1,57 @@
+Assignment - IO operation
+
+1. What is Input and Output Stream in Java?
+Ans: A stream can be defined as a sequence of data. The InputStream is used to read data from a source and the outputStream is used for writing data to a destination.
+
+2. What are the methods of OutputStream?
+Ans: write() - writes the specified byte to the output stream.
+ write(byte[] array) - writes the bytes from the specified array to the output stream.
+ flush() - forces to write all data present in the output stream to the destination.
+ close() - closes the output stream.
+
+3. What is serialization in Java?
+Ans: Serialization is the process of converting an object into a stream of bytes to transfer it over a network or to store it in a file or database. In Java, serialization is done by implementing the Serializable interface.
+
+4. What is the Serializable interface in Java?
+Ans: The Serializable interface in Java is a marker interface that has no methods. It is used to mark classes that can be serialized, meaning their object instances can be converted into a stream of bytes.
+
+5. What is deserialization in Java?
+Ans: Deserialization is the process of converting a stream of bytes back into an object instance. This is done after an object has been serialized.
+
+6. How is serialization achieved in Java?
+Ans: Serialization is achieved in Java by implementing the Serializable interface. When an object is serialized, its state is converted into a stream of bytes, which can then be transferred over a network or stored in a file or database.
+
+7. How is deserialization achieved in Java?
+Ans: Deserialization is achieved in Java by reading a stream of bytes and using them to recreate the original object instance. This is done by calling the readobject() method of an objectInputStream instance.
+
+8. How can you avoid certain member variables of class from getting Serialized?
+Ans: Mark member variables as static or transient, and those member variables will no more be a part of Serialization.
+
+9. What classes are available in the Java IO File Classes API?
+Ans: The following classes are available in the Java In API and are important to work with files in Java.
+File
+RandomAccessFile
+FileInputStream
+FileReader
+FileMutputStream
+FileWriter
+
+10. What is Difference between Externalizable and Serialization interface ?
+Ans: Both `Externalizable` and `Serializable` are interfaces in Java that allow objects to be converted into a stream of bytes, which can then be saved to a file, sent over a network, or otherwise transmitted to another location. However, there are some key differences between the two interfaces.
+
+1. Control over serialization: 
+   - `Serializable` provides automatic serialization, where all fields of an object are serialized by default.
+   - `Externalizable` provides more control over serialization, where the implementing class must explicitly write and read each field.
+
+2. Serialization process:
+   - In `Serializable`, the serialization and deserialization process is handled automatically by the JVM.
+   - In `Externalizable`, the serialization and deserialization process is done by the class itself, and the class must implement the `writeExternal()` and `readExternal()` methods to handle the serialization and deserialization.
+
+3. Serialization format:
+   - `Serializable` serializes objects into a binary format that is not human-readable.
+   - `Externalizable` provides more flexibility in the serialization format, as the class can choose to serialize its fields in any format it desires, including a human-readable format like XML or JSON.
+
+4. Performance:
+   - `Externalizable` can provide better performance in certain situations, as it allows for more control over the serialization process and can reduce the size of the serialized object.
+
+In summary, `Externalizable` provides more control over the serialization process and can lead to better performance in certain situations, but it requires more work on the part of the implementing class. On the other hand, `Serializable` provides automatic serialization but offers less control over the serialization process and serialization format.
