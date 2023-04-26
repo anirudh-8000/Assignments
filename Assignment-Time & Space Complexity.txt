@@ -1,0 +1,437 @@
+Assignment-Time & Space Complexity
+
+Question 1. Analyze the time complexity of the following Java code and suggest a way to improve it:
+int sum = 0;
+for(int i = 1; i <= n; i++) {
+for(int j = 1; j <= i; j++) {
+sum++;
+}
+}
+Ans:The given Java code computes the sum of the first n positive integers using two nested loops. The outer loop iterates from 1 to n, and the inner loop iterates from 1 to i, where i is the current value of the outer loop variable. Therefore, the total number of iterations of the inner loop is:
+
+1 + 2 + 3 + ... + n = n(n+1)/2
+
+Since each iteration of the inner loop takes constant time, the overall time complexity of the code is O(n^2).
+
+One way to improve the time complexity of this code is to use the formula for the sum of the first n positive integers, which is:
+
+1 + 2 + 3 + ... + n = n(n+1)/2
+
+We can compute this formula in constant time and eliminate the need for the inner loop. The improved code would be:
+
+int sum = (n * (n + 1)) / 2;
+
+This code has a time complexity of O(1), which is much faster than the original code.
+
+
+
+
+
+Question 2: Find the value of T(2) for the recurrence relation T(n) = 3T(n-1) + 12n, given that T(0) = 5.
+Ans:To find the value of T(2), we need to use the recurrence relation:
+
+T(n) = 3T(n-1) + 12n
+
+We are given that T(0) = 5, which is our initial condition. We can use this to find T(1):
+
+T(1) = 3T(0) + 12(1) = 3(5) + 12 = 27
+
+Now, we can use the recurrence relation again to find T(2):
+
+T(2) = 3T(1) + 12(2) = 3(27) + 24 = 105
+
+Therefore, the value of T(2) is 105.
+
+
+
+
+
+Question 3: Given a recurrence relation, solve it using a substitution method.
+Relation : T(n) = T(n - 1) + c
+Ans:To solve the recurrence relation T(n) = T(n-1) + c using substitution method, we assume that the solution takes the form of a linear function:
+
+T(n) = an + b
+
+where a and b are constants to be determined. We substitute this function into the recurrence relation to get:
+
+an + b = a(n-1) + b + c
+
+Simplifying and rearranging terms, we get:
+
+an = a(n-1) + c
+
+Dividing both sides by a, we get:
+
+n = n - 1 + c/a
+
+Solving for a, we get:
+
+a = 1
+
+Solving for b, we use the initial condition T(0) = b to get:
+
+b = T(0)
+
+Therefore, the solution to the recurrence relation T(n) = T(n-1) + c is:
+
+T(n) = nT(0) + cn
+
+where T(0) is the initial condition.
+
+
+
+
+
+Question 4: Given a recurrence relation:
+T(n) = 16T(n/4) + n2logn
+Find the time complexity of this relation using the master theorem.
+Ans:To use the master theorem to find the time complexity of the recurrence relation T(n) = 16T(n/4) + n^2logn, we first need to identify its parameters. The recurrence relation can be written in the form:
+
+T(n) = aT(n/b) + f(n)
+
+where a = 16, b = 4, and f(n) = n^2logn.
+
+Next, we need to find the value of the parameter logb a:
+
+logb a = log4 16 = 2
+
+We also need to evaluate the function f(n) in terms of big O notation. We can do this by considering the growth rate of the function as n approaches infinity. In this case, we have:
+
+n^2logn = O(n^2logn)
+
+Therefore, we have:
+
+f(n) = O(n^2logn)
+
+Using the master theorem, we can now determine the time complexity of the recurrence relation:
+
+If f(n) = O(n^(logb a - ε)) for some ε > 0, then T(n) = Θ(n^(logb a)).
+If f(n) = Θ(n^(logb a)), then T(n) = Θ(n^(logb a)log n).
+If f(n) = Ω(n^(logb a + ε)) for some ε > 0, and if af(n/b) ≤ cf(n) for some constant c < 1 and all sufficiently large n, then T(n) = Θ(f(n)).
+In our case, we have:
+
+logb a = 2
+f(n) = O(n^2logn)
+
+Since f(n) = O(n^(logb a - ε)) for ε = 1, we can apply case 1 of the master theorem to get:
+
+T(n) = Θ(n^2)
+
+Therefore, the time complexity of the recurrence relation T(n) = 16T(n/4) + n^2logn is Θ(n^2).
+
+
+
+
+
+Question 5: Solve the following recurrence relation using recursion tree method 
+T(n) = 2T(n/2) + n
+Ans:To solve the recurrence relation T(n) = 2T(n/2) + n using recursion tree method, we will draw a recursion tree and compute the time taken at each level.
+
+At level 1, the recurrence relation has T(n/2) on the right-hand side. Therefore, the contribution of level 1 to the overall time complexity is n.
+
+At level 2, we have two subproblems of size n/2, each taking T(n/4) time. Therefore, the contribution of level 2 to the overall time complexity is 2(n/2) = n.
+
+At level 3, we have four subproblems of size n/4, each taking T(n/8) time. Therefore, the contribution of level 3 to the overall time complexity is 4(n/4) = n.
+
+We can continue in this way, and at level k, we have 2^k subproblems of size n/2^k, each taking T(n/2^k) time. Therefore, the contribution of level k to the overall time complexity is 2^k(n/2^k) = n.
+
+The recursion tree has log n levels, since we divide the problem size by 2 at each level until we reach the base case of T(1). Therefore, the overall time complexity is the sum of the time taken at each level, which is:
+
+T(n) = n + n + n + ... (log n terms)
+= n log n
+
+Therefore, the solution to the recurrence relation T(n) = 2T(n/2) + n using recursion tree method is T(n) = Θ(n log n).
+
+
+
+
+
+
+
+
+
+
+Question 6. T(n) = 2T(n/2) + K, Solve using Recurrence tree method.
+Ans:To solve the recurrence relation T(n) = 2T(n/2) + K using the recursion tree method, we will draw a recursion tree and compute the time taken at each level.
+
+At level 1, the recurrence relation has T(n/2) on the right-hand side. Therefore, the contribution of level 1 to the overall time complexity is K.
+
+At level 2, we have two subproblems of size n/2, each taking T(n/4) time. Therefore, the contribution of level 2 to the overall time complexity is 2K.
+
+At level 3, we have four subproblems of size n/4, each taking T(n/8) time. Therefore, the contribution of level 3 to the overall time complexity is 4K.
+
+We can continue in this way, and at level k, we have 2^k subproblems of size n/2^k, each taking T(n/2^k) time. Therefore, the contribution of level k to the overall time complexity is 2^K.
+
+The recursion tree has log n levels, since we divide the problem size by 2 at each level until we reach the base case of T(1). Therefore, the overall time complexity is the sum of the time taken at each level, which is:
+
+T(n) = K + 2K + 4K + ... (log n terms)
+= K(2^0 + 2^1 + 2^2 + ... + 2^(log n-1))
+= K(2^log n - 1)/(2 - 1)
+= K(2n - 1)
+
+Therefore, the solution to the recurrence relation T(n) = 2T(n/2) + K using the recursion tree method is T(n) = Θ(n).
+
+
+
+
+
+
+
+
+
+Assignment- 1D_Array
+
+Q1: Write a program to print the sum of all the elements present on even indices in the given array.
+Ans:
+public class Array {
+    public static int evenIndices(int [] arr){
+        int  ans =0;
+        for(int i=0;i<arr.length;i++){
+            if(i%2==0)
+               ans+=arr[i];
+        }
+        return ans;
+    }
+   public static void main(String[] args) {
+        int arr[]={2,4,6,8,10,12,14,16};
+        System.out.println(evenIndices(arr));
+   }
+}
+output:
+32
+
+Q2: Write a program to traverse over the elements of the array using for each loop and print all even elements.
+Ans:
+public class Array {
+   public static void main(String[] args) {
+        int arr[]={42,35,23,76,89,56,34,63,70};
+        for(int i:arr){
+            if(i%2==0)
+               System.out.print(i+"\t");
+        }
+   }
+}
+output:
+42      76      56      34      70
+
+Q3: Write a program to calculate the maximum element in the array.
+Ans:
+public class Array {
+   public static void main(String[] args) {
+        int maxElement=Integer.MIN_VALUE;
+        int arr[]={42,35,23,76,89,56,34,63,70};
+        for(int i:arr){
+            if(i>maxElement)
+               maxElement=i;
+        }
+        System.out.println("Maximum Element is:"+maxElement);
+   }
+}
+
+output:
+Maximum Element is:89
+
+Q4: Write a program to find out the second largest element in a given array.
+Ans:
+public class Array {
+   public static void main(String[] args) {
+        int maxElement=Integer.MIN_VALUE;
+        int maxElement2=Integer.MIN_VALUE;
+        int arr[]={42,35,23,76,89,56,34,63,70};
+        for(int i:arr){
+            if(i>maxElement)
+               maxElement=i;
+        }
+        for(int i:arr){
+            if(i<maxElement && i>maxElement2)
+               maxElement2=i;
+        }
+        System.out.println("2nd largest Element : "+maxElement2);
+
+   }
+}
+output:
+2nd largest Element : 76
+
+Q5: Given an array. Find the first peak element in the array. A peak element is an element that is greater than its just left and just right neighbor.
+Ans:
+public class Array {
+   public static void main(String[] args) {
+        int arr[]={42,35,23,76,89,56,34,63,70};
+        int n=arr.length;
+        for(int i=1;i<n-1;i++){
+            if(arr[i]>arr[i-1] && arr[i+1]<arr[i]){
+                System.out.println("First Peak Element: "+arr[i]);
+                break;
+            }
+        }
+    }
+}
+output:
+First Peak Element: 89
+
+
+
+
+
+
+
+
+
+
+Assignment - 2D_Array
+
+Q1: Take m and n input from the user and m * n integer inputs from user and print the following:
+number of positive numbers
+number of negative numbers
+number of odd numbers
+number of even numbers
+number of 0.
+
+Ans:
+public class Array {
+    public static void counter(int[][] arr){
+        int m=arr.length;
+        int n=arr[0].length;
+        int positiveNumber=0,negativeNumber=0,zero=0,oddNumber=0,evenNumber=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(arr[i][j]==0)
+                    zero++;
+                else if(arr[i][j]>0)
+                    positiveNumber++;
+                else    
+                    negativeNumber++;
+                if(arr[i][j]%2==0)
+                    evenNumber++;
+                else
+                    oddNumber++;        
+            }
+        }
+        System.out.println("Total positive Numbers are:"+positiveNumber);
+        System.out.println("Total negative Numbers are:"+negativeNumber);
+        System.out.println("Total number of zeroes:"+zero);
+        System.out.println("Total odd Numbers are:"+oddNumber);
+        System.out.println("Total even Numbers are:"+evenNumber);
+    }
+    public static void main(String[] args) {
+        int [][]arr={{1,0,-2,4},
+                     {3,6,-9,0},
+                     {9,7,6,-10},
+                     {-3,-5,20,43}};
+        counter(arr);             
+    }
+}
+Output:
+Total positive Numbers are:9
+Total negative Numbers are:5
+Total number of zeroes:2
+Total odd Numbers are:8
+Total even Numbers are:8
+
+Q2: write a program to print the elements above the secondary diagonal in a user inputted
+square matrix.
+Ans:
+public class Array{
+ public static void diagonal(int[][] arr){
+        int m=arr.length;
+        int n=arr[0].length;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(i+j<m-1){
+                    System.out.print(arr[i][j]+"\t");
+                }
+            }
+
+        }
+    }
+    public static void main(String[] args) {
+        int [][]arr={{1,0,-2,4},
+                     {3,6,-9,0},
+                     {9,7,6,-10},
+                     {-3,-5,20,43}};
+        diagonal(arr);             
+    }
+}
+Output:
+1       0       -2      3       6       9
+
+Q3: write a program to print the elements of both the diagonals in a user inputted square matrix in any order.
+Ans:
+public class Array{
+ public static void diagonal(int[][] arr){
+        int m=arr.length;
+        int n=arr[0].length;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(i+j==m-1||i==j){
+                    System.out.print(arr[i][j]+"\t");
+                }
+            }
+
+        }
+    }
+    public static void main(String[] args) {
+        int [][]arr={{1,2,3},
+                     {5,6,7},
+                     {9,10,11}};
+        diagonal(arr);             
+    }
+}
+Output:
+1       3       6       9       11
+
+Q4: Write a program to find the largest element of a given 2D array of integers.
+Ans:
+public class array{
+public static int maximum(int[][] arr){
+        int m=arr.length;
+        int n=arr[0].length;
+        int max=arr[0][0];
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(max<arr[i][j]){
+                    max=arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+    public static void main(String[] args) {
+        int [][]arr={{1,2,3},
+                     {5,6,7},
+                     {9,10,11},
+                     {13,14,15}};
+        System.out.println(maximum(arr));             
+    }
+}
+Output:
+15
+
+Write a function which accepts a 2D array of integers and its size as arguments and
+displays the elements of middle row and the elements of middle column. Printing can
+be done in any order.
+[Assuming the 2D Array to be a square matrix with odd dimensions i.e. 3x3, 5x5, 7x7 etc...]
+Ans:
+public class Array{
+public static void middleRowCol(int[][] arr){
+        int m=arr.length;
+        for(int i=0;i<m;i++){
+            System.out.print(arr[i][m/2]+"\t");
+        }
+        for(int i=0;i<m;i++){
+            if(i!=m/2)
+            System.out.print(arr[m/2][i]+"\t");
+        }
+    }
+    public static void main(String[] args) {
+        int [][]arr={{1,2,3,4,5},
+                     {6,7,8,9,10},
+                     {11,12,13,14,15},
+                     {16,17,18,19,20},
+                     {21,22,23,24,25}};
+        middleRowCol(arr);           
+    }
+}
+output:
+3       8       13      18      23      11      12      14       15
